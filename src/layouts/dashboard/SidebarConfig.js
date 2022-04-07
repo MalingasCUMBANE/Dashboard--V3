@@ -14,12 +14,14 @@ const sidebarConfig = [
   {
     title: 'user',
     path: '/dashboard/user',
-    icon: getIcon('eva:people-fill')
+    // icon: getIcon('eva:people-fill')
+    icon: getIcon('eva:file-text-fill')
   },
   {
     title: 'product',
     path: '/dashboard/products',
-    icon: getIcon('eva:shopping-bag-fill')
+    icon: getIcon('eva:file-text-fill')
+    // icon: getIcon('eva:shopping-bag-fill')
   },
   {
     title: 'blog',
