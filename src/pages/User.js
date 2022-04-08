@@ -198,15 +198,8 @@ export default function User() {
                           </TableCell>
                           <TableCell align="left">{company}</TableCell>
                           <TableCell align="left">{role}</TableCell>
-                          {/* <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell> */}
-                          <TableCell align="left">
-                            {/* <Label
-                              variant="ghost"
-                              color={(status === 'banned' && 'error') || 'success'}
-                            > */}
-                            {/* {sentenceCase(status)} */}
-                            {/* </Label> */}
-                          </TableCell>
+                          <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
+                          {/* <TableCell align="left"></TableCell> */}
 
                           <TableCell align="right">
                             <UserMoreMenu />

@@ -12,19 +12,19 @@ const sidebarConfig = [
     icon: getIcon('eva:pie-chart-2-fill')
   },
   {
-    title: 'user',
+    title: 'Operações Concluídas',
     path: '/dashboard/user',
     // icon: getIcon('eva:people-fill')
     icon: getIcon('eva:file-text-fill')
   },
   {
-    title: 'product',
+    title: 'Operações Não Concluídas',
     path: '/dashboard/products',
     icon: getIcon('eva:file-text-fill')
     // icon: getIcon('eva:shopping-bag-fill')
   },
   {
-    title: 'blog',
+    title: 'Relatórios',
     path: '/dashboard/blog',
     icon: getIcon('eva:file-text-fill')
   },
