@@ -6,9 +6,12 @@ import LogoOnlyLayout from './layouts/LogoOnlyLayout';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import DashboardApp from './pages/DashboardApp';
-import Products from './pages/Products';
-import Blog from './pages/Blog';
-import User from './pages/User';
+// import OperacoesNaoConcluidas from './pages/OperacoesNaoConcluidas';
+import OperacoesNaoConcluidas from './pages/OperacoesNaoConcluidas';
+import Relatorios from './pages/Relatorios';
+// import OperacoesConcluidas from './pages/OperacoesConcluidas';
+import OperacoesConcluidas from './pages/OperacoesConcluidas';
+
 import NotFound from './pages/Page404';
 
 // ----------------------------------------------------------------------
@@ -20,9 +23,9 @@ export default function Router() {
       element: <DashboardLayout />,
       children: [
         { path: 'app', element: <DashboardApp /> },
-        { path: 'user', element: <User /> },
-        { path: 'products', element: <Products /> },
-        { path: 'blog', element: <Blog /> }
+        { path: 'operacoesconcluidas', element: <OperacoesConcluidas /> },
+        { path: 'operacoesnaoconcluidas', element: <OperacoesNaoConcluidas /> },
+        { path: 'relatorios', element: <Relatorios /> }
       ]
     },
     {

@@ -13,19 +13,19 @@ const sidebarConfig = [
   },
   {
     title: 'Operações Concluídas',
-    path: '/dashboard/user',
+    path: '/dashboard/operacoesconcluidas',
     // icon: getIcon('eva:people-fill')
     icon: getIcon('eva:file-text-fill')
   },
   {
     title: 'Operações Não Concluídas',
-    path: '/dashboard/products',
+    path: '/dashboard/operacoesnaoconcluidas',
     icon: getIcon('eva:file-text-fill')
     // icon: getIcon('eva:shopping-bag-fill')
   },
   {
     title: 'Relatórios',
-    path: '/dashboard/blog',
+    path: '/dashboard/relatorios',
     icon: getIcon('eva:file-text-fill')
   },
   {
@@ -33,11 +33,11 @@ const sidebarConfig = [
     path: '/login',
     icon: getIcon('eva:lock-fill')
   },
-  {
-    title: 'register',
-    path: '/register',
-    icon: getIcon('eva:person-add-fill')
-  },
+  // {
+  //   title: 'register',
+  //   path: '/register',
+  //   icon: getIcon('eva:person-add-fill')
+  // },
   {
     title: 'Not found',
     path: '/404',
