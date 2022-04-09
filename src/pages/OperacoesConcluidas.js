@@ -16,10 +16,20 @@ import {
   Container,
   Typography,
   TableContainer,
-  TablePagination
+  TablePagination,
+  Box,
+  Grid
 } from '@mui/material';
+
 // components
 import Page from '../components/Page';
+
+import Consultas from '../sections/@dashboard/cardsoperacoesconcluidas/Consultas';
+import TotalPagamentos from '../sections/@dashboard/cardsoperacoesconcluidas/TotalPagamentos';
+import ValorTotal from '../sections/@dashboard/cardsoperacoesconcluidas/ValorTotal';
+
+import Tabelaoperacoesconcluidas from '../sections/@dashboard/operacoes/Tabelaoperacoesconcluidas';
+import Tabelaoperacoesnaoconcluidas from '../sections/@dashboard/operacoes/Tabelaoperacoesnaoconcluidas';
 import Label from '../components/Label';
 import Scrollbar from '../components/Scrollbar';
 import Iconify from '../components/Iconify';
@@ -132,10 +142,24 @@ export default function OperacoesConcluidas() {
 
   return (
     <Page title="User | Minimal-UI">
+      <Container maxWidth="xl">
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6} md={4}>
+            <Consultas />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <TotalPagamentos />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <ValorTotal />
+          </Grid>
+        </Grid>
+      </Container>
+
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            Operações Concluídas
+            Operações Concluída
           </Typography>
           {/* <Button
             variant="contained"
