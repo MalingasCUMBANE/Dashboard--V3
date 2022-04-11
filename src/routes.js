@@ -1,9 +1,11 @@
-import { Navigate, useRoutes } from 'react-router-dom';
+import { Navigate, useRoutes, Route } from 'react-router-dom';
+// import { BrowserRouter, , Switch,  } from "react-router-dom";
 // layouts
 import DashboardLayout from './layouts/dashboard';
 import LogoOnlyLayout from './layouts/LogoOnlyLayout';
 //
 import Login from './pages/Login';
+import { isAuthenticated } from './lib/api';
 import Register from './pages/Register';
 import DashboardApp from './pages/DashboardApp';
 // import OperacoesNaoConcluidas from './pages/OperacoesNaoConcluidas';
@@ -32,8 +34,8 @@ export default function Router() {
       path: '/',
       element: <LogoOnlyLayout />,
       children: [
-        { path: '/', element: <Navigate to="/dashboard/app" /> },
-        // { path: 'login', element: <Login /> },
+        { path: '/dashboard', element: <Navigate to="/dashboard/app" /> },
+        { path: '/', element: <Login /> },
         // { path: 'register', element: <Register /> },
         { path: '404', element: <NotFound /> },
         { path: '*', element: <Navigate to="/404" /> }

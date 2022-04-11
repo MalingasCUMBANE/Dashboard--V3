@@ -15,6 +15,7 @@ import {
 import { LoadingButton } from '@mui/lab';
 // component
 import Iconify from '../../../components/Iconify';
+import { baseurl } from '../../../lib/settings';
 
 // ----------------------------------------------------------------------
 
@@ -23,7 +24,7 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
 
   const LoginSchema = Yup.object().shape({
-    email: Yup.string().email('Email must be a valid email address').required('Email is required'),
+    email: Yup.string().required('Email is required'),
     password: Yup.string().required('Password is required')
   });
 
@@ -34,10 +35,29 @@ export default function LoginForm() {
       remember: true
     },
     validationSchema: LoginSchema,
-    onSubmit: () => {
-      navigate('/dashboard', { replace: true });
+    onSubmit: (e) => {
+      const data = {
+        username: e.email,
+        password: e.password
+      };
+      postData(data);
+
+      // navigate('/dashboard', { replace: true });
     }
   });
+
+  async function postData(data) {
+    console.log('Fazendo Login, Com os Seguintes dados: ', data);
+    const resp = await baseurl.post('api/login/', data).then((resp) => {
+      console.log(resp.data['token']);
+      localStorage.setItem('token', resp.data['token']);
+      if (resp.data['token']) {
+        navigate('/dashboard/app', { replace: true });
+      } else {
+        console.log('Sem Token');
+      }
+    });
+  }
 
   const { errors, touched, values, isSubmitting, handleSubmit, getFieldProps } = formik;
 
@@ -52,8 +72,8 @@ export default function LoginForm() {
           <TextField
             fullWidth
             autoComplete="username"
-            type="email"
-            label="Email address"
+            type="text"
+            label="Username"
             {...getFieldProps('email')}
             error={Boolean(touched.email && errors.email)}
             helperText={touched.email && errors.email}
@@ -82,12 +102,12 @@ export default function LoginForm() {
         <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ my: 2 }}>
           <FormControlLabel
             control={<Checkbox {...getFieldProps('remember')} checked={values.remember} />}
-            label="Remember me"
+            label="Lembrar-me"
           />
 
-          <Link component={RouterLink} variant="subtitle2" to="#" underline="hover">
+          {/* <Link component={RouterLink} variant="subtitle2" to="#" underline="hover">
             Forgot password?
-          </Link>
+          </Link> */}
         </Stack>
 
         <LoadingButton

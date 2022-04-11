@@ -155,6 +155,8 @@ export default function OperacoesConcluidas() {
           </Grid>
         </Grid>
       </Container>
+      <br />
+      <br />
 
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
