@@ -52,7 +52,7 @@ export default function AppItemOrders() {
   let VALOR_TOTAL = rows.length;
 
   VALOR_TOTAL *= 3;
-  //armazena o valor da variavel TOTAL
+  // armazena o valor da variavel TOTAL
   return (
     <RootStyle>
       <IconWrapperStyle>

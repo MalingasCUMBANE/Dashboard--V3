@@ -1,10 +1,13 @@
+/* eslint-disable */
+
 import { merge } from 'lodash';
 import ReactApexChart from 'react-apexcharts';
 // material
 import { useTheme, styled } from '@mui/material/styles';
 import { Card, CardHeader } from '@mui/material';
 // utils
-import { fNumber } from '../../../utils/formatNumber';
+import { React, useEffect, useState } from 'react';
+// import { fNumber } from '../../../utils/formatNumber';
 //
 import { BaseOptionChart } from '../../../components/charts';
 
@@ -31,10 +34,48 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [5435, 1443, 4443];
-
 export default function AppCurrentVisits() {
   const theme = useTheme();
+  const [rows, setRows] = useState([]);
+  useEffect(() => {
+    getConsultas();
+  }, []);
+
+  var contMovitel = 0;
+  var contVodacom = 0;
+  var contTmcel = 0;
+  const getConsultas = async () => {
+    baseurl.get('api/auth/ussd').then((response) => {
+      setRows(response.data);
+    });
+  };
+
+  {
+    rows.map((requisi, index) => {
+      console.log('Inicio');
+      if (requisi.phone.substring(0, 5) == '25887' || requisi.phone.substring(0, 5) == '25886') {
+        contMovitel++;
+        console.log('Resultado Cont contMovitel-->', contMovitel);
+      } else if (
+        requisi.phone.substring(0, 5) === '25884' ||
+        requisi.phone.substring(0, 5) === '25885'
+      ) {
+        contVodacom++;
+        console.log('Resultado Cont contVodacom-->', contVodacom);
+      } else if (
+        requisi.phone.substring(0, 5) === '25882' ||
+        requisi.phone.substring(0, 5) === '25883'
+      ) {
+        contTmcel++;
+        console.log('Resultado Cont contTmcel-->', contTmcel);
+      }
+    });
+  }
+
+  let a = contMovitel;
+  let b = contVodacom;
+  let c = contTmcel;
+  const CHART_DATA = [a, b, c];
 
   const chartOptions = merge(BaseOptionChart(), {
     colors: [
