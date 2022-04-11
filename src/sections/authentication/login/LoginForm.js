@@ -24,8 +24,8 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
 
   const LoginSchema = Yup.object().shape({
-    email: Yup.string().required('Email is required'),
-    password: Yup.string().required('Password is required')
+    email: Yup.string().required('Username necessario'),
+    password: Yup.string().required('Password necessario')
   });
 
   const formik = useFormik({
@@ -47,11 +47,13 @@ export default function LoginForm() {
   });
 
   async function postData(data) {
-    console.log('Fazendo Login, Com os Seguintes dados: ', data);
+    localStorage.removeItem('token');
+    console.log('Fazendo Login, com os seguintes dados: ', data);
     const resp = await baseurl.post('api/login/', data).then((resp) => {
-      console.log(resp.data['token']);
-      localStorage.setItem('token', resp.data['token']);
-      if (resp.data['token']) {
+      console.log(resp.data.token);
+
+      localStorage.setItem('token', resp.data.token);
+      if (resp.data.token) {
         navigate('/dashboard/app', { replace: true });
       } else {
         console.log('Sem Token');
