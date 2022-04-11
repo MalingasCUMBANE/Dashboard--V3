@@ -49,10 +49,10 @@ export default function Login() {
       </AuthLayout>
 
       <SectionStyle sx={{ display: { xs: 'none', md: 'flex' } }}>
-        <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
+        {/* <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
           Olá, bem vindo
-        </Typography>
-        <img src="/static/illustrations/illustration_login.png" alt="login" />
+        </Typography> */}
+        <img src="/static/illustrations/dashboard.svg" alt="login" />
       </SectionStyle>
 
       <Container maxWidth="sm">
