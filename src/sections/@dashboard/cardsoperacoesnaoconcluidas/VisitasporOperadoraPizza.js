@@ -35,7 +35,7 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function AppCurrentVisits() {
+export default function VisitasporOperadoraPizza() {
   const theme = useTheme();
   const [rows, setRows] = useState([]);
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function AppCurrentVisits() {
   var contVodacom = 0;
   var contTmcel = 0;
   const getConsultas = async () => {
-    baseurl.get('api/auth/ussd').then((response) => {
+    baseurl.get('api/auth/all_requests').then((response) => {
       setRows(response.data);
     });
   };
@@ -105,7 +105,7 @@ export default function AppCurrentVisits() {
 
   return (
     <Card>
-      <CardHeader title="Operações por Operadora" />
+      <CardHeader title="Operações por Operadora - sem concluir" />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="pie" series={CHART_DATA} options={chartOptions} height={280} />
       </ChartWrapperStyle>
