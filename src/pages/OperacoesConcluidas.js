@@ -28,6 +28,7 @@ import Page from '../components/Page';
 import Consultas from '../sections/@dashboard/cardsoperacoesconcluidas/Consultas';
 import TotalPagamentos from '../sections/@dashboard/cardsoperacoesconcluidas/TotalPagamentos';
 import ValorTotal from '../sections/@dashboard/cardsoperacoesconcluidas/ValorTotal';
+import { AppCurrentVisits } from '../sections/@dashboard/app';
 
 // ----------------------------------------------------------------------
 
@@ -69,17 +70,25 @@ export default function OperacoesConcluidas() {
       </Container>
       <br />
       <br />
-      <div style={{ height: 400, width: '100%' }}>
-        <h3>Operações Concluídas</h3>
-        <br />
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
-          checkboxSelection
-        />
-      </div>
+
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6} md={8}>
+          <div style={{ height: 400, width: '100%' }}>
+            <h3>Operações Concluídas</h3>
+            <br />
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              pageSize={5}
+              rowsPerPageOptions={[5]}
+              checkboxSelection
+            />
+          </div>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <AppCurrentVisits />
+        </Grid>
+      </Grid>
     </Page>
   );
 }

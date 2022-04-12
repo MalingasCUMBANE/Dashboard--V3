@@ -18,7 +18,7 @@ const sidebarConfig = [
     icon: getIcon('eva:file-text-fill')
   },
   {
-    title: 'Operações Não Concluídas',
+    title: 'Acessos',
     path: '/dashboard/operacoesnaoconcluidas',
     icon: getIcon('eva:file-text-fill')
     // icon: getIcon('eva:shopping-bag-fill')

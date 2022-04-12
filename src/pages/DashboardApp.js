@@ -1,5 +1,6 @@
 // material
 import { Box, Grid, Container, Typography } from '@mui/material';
+import VisitasporOperadoraPizza from '../sections/@dashboard/cardsoperacoesnaoconcluidas/VisitasporOperadoraPizza';
 
 // components
 import Page from '../components/Page';
@@ -33,31 +34,34 @@ export default function DashboardApp() {
           <Grid item xs={12} sm={6} md={3}>
             <AppWeeklySales />
           </Grid>
+          <br />
           <Grid item xs={12} sm={6} md={3}>
             <AppNewUsers />
           </Grid>
+          <br />
           <Grid item xs={12} sm={6} md={3}>
             <AppItemOrders />
           </Grid>
+          <br />
           <Grid item xs={12} sm={6} md={3}>
             <AppBugReports />
           </Grid>
-
+          <br />
           <Grid item xs={12} md={6} lg={8}>
-            <AppWebsiteVisits />
+            <Tabelaoperacoesconcluidas />
           </Grid>
-
+          <br />
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits />
           </Grid>
-
+          <br />
           <Grid item xs={12} md={6} lg={8}>
-            <AppConversionRates />
+            <Tabelaoperacoesnaoconcluidas />
           </Grid>
-
-          {/* <Grid item xs={12} md={6} lg={4}>
-            <AppCurrentSubject />
-          </Grid> */}
+          <br />
+          <Grid item xs={12} md={6} lg={4}>
+            <VisitasporOperadoraPizza />
+          </Grid>
 
           {/* <Grid item xs={12} md={6} lg={8}>
             <AppNewsUpdate />
@@ -68,7 +72,7 @@ export default function DashboardApp() {
           </Grid> */}
 
           <Grid item xs={12} md={6} lg={8}>
-            <Tabelaoperacoesconcluidas />
+            <AppWebsiteVisits />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
@@ -76,7 +80,7 @@ export default function DashboardApp() {
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
-            <Tabelaoperacoesnaoconcluidas />
+            <AppConversionRates />
           </Grid>
         </Grid>
       </Container>

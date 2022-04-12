@@ -44,7 +44,7 @@ export default function AppWeeklySales() {
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
-    baseurl.get('api/auth/payments/').then((response) => {
+    baseurl.get('api/auth/ussd/').then((response) => {
       setRows(response.data);
     });
   }, []);

@@ -86,7 +86,7 @@ export default function AppOrderTimeline() {
         }
       }}
     >
-      <CardHeader title="Ultimas Consultas" />
+      <CardHeader title="Top 5 Consultas" />
       <CardContent>
         <Timeline>
           {TIMELINES.map((item, index) => (
