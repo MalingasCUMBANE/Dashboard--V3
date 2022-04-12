@@ -62,7 +62,14 @@ export default function DashboardApp() {
           <Grid item xs={12} md={6} lg={4}>
             <VisitasporOperadoraPizza />
           </Grid>
+        </Grid>
+      </Container>
 
+      <Container maxWidth="xl">
+        <Box sx={{ pb: 5, pt: 10 }}>
+          <Typography variant="h4">Graficos abaixo em desenvolvimento</Typography>
+        </Box>
+        <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits />
           </Grid>
