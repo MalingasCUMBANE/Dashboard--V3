@@ -10,7 +10,7 @@ import Tabelaoperacoesnaoconcluidas from '../sections/@dashboard/operacoes/Tabel
 
 export default function OperacoesNaoConcluidas() {
   return (
-    <Page title="User | Minimal-UI">
+    <Page title="e-STM">
       <Container maxWidth="xl">
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={2}>

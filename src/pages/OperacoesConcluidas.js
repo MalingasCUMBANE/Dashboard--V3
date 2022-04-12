@@ -1,25 +1,9 @@
 import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
 import { useState, useEffect } from 'react';
 
 // material
-import {
-  Card,
-  Table,
-  Stack,
-  Avatar,
-  Button,
-  Checkbox,
-  TableRow,
-  TableBody,
-  TableCell,
-  Container,
-  Typography,
-  TableContainer,
-  TablePagination,
-  Box,
-  Grid
-} from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import { baseurl } from '../lib/settings';
 
 // components
@@ -31,13 +15,19 @@ import ValorTotal from '../sections/@dashboard/cardsoperacoesconcluidas/ValorTot
 import { AppCurrentVisits } from '../sections/@dashboard/app';
 
 // ----------------------------------------------------------------------
-
+function CustomToolbar() {
+  return (
+    <GridToolbarContainer>
+      <GridToolbarExport />
+    </GridToolbarContainer>
+  );
+}
 // ----------------------------------------------------------------------
 export default function OperacoesConcluidas() {
   const [rows, setRows] = useState([]);
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
+    // { field: 'id', headerName: 'ID', width: 70 },
     { field: 'phone', headerName: 'Celular', width: 130 },
     { field: 'date', headerName: 'Data', width: 140 },
     { field: 'trasantion_type', headerName: 'Operação', width: 370 }
@@ -54,7 +44,7 @@ export default function OperacoesConcluidas() {
   }, []);
 
   return (
-    <Page title="User | Minimal-UI">
+    <Page title="e-STM">
       <Container maxWidth="xl">
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
@@ -73,7 +63,7 @@ export default function OperacoesConcluidas() {
 
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={8}>
-          <div style={{ height: 400, width: '100%' }}>
+          <div style={{ height: 500, width: '100%', paddingBottom: '30px', paddingTop: '10px' }}>
             <h3>Operações Concluídas</h3>
             <br />
             <DataGrid
@@ -82,6 +72,9 @@ export default function OperacoesConcluidas() {
               pageSize={5}
               rowsPerPageOptions={[5]}
               checkboxSelection
+              components={{
+                Toolbar: CustomToolbar
+              }}
             />
           </div>
         </Grid>

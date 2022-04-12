@@ -63,14 +63,6 @@ export default function DashboardApp() {
             <VisitasporOperadoraPizza />
           </Grid>
 
-          {/* <Grid item xs={12} md={6} lg={8}>
-            <AppNewsUpdate />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={4}>
-            <AppOrderTimeline />
-          </Grid> */}
-
           <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits />
           </Grid>
