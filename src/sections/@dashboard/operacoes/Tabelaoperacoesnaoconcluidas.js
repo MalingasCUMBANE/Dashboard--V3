@@ -6,7 +6,6 @@ import { DataGrid } from '@mui/x-data-grid';
 import { baseurl } from '../../../lib/settings';
 
 export default function Tabelaoperacoesnaoconcluidas() {
-  const [rows, setRows] = useState([]);
   const [requisicoes, setRequisicoes] = useState([]);
 
   const columns = [

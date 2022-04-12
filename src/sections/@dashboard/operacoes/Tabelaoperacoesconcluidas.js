@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-// import { useHistory } from 'react-router-dom';
-// import { baseurl } from "../../lib/settings";
-
 import { DataGrid } from '@mui/x-data-grid';
+import { baseurl } from '../../../lib/settings';
 
 export default function Tabelaoperacoesconcluidas() {
-  // const history = useHistory();
   const [rows, setRows] = useState([]);
 
   const columns = [
@@ -16,18 +13,15 @@ export default function Tabelaoperacoesconcluidas() {
     { field: 'trasantion_type', headerName: 'Operação', width: 370 }
   ];
 
-  // const getConsultas = async () => {
-  //   baseurl.get("api/auth/ussd").then((response) => {
-  //     setRows(response.data);
-  //   });
-  // };
+  const getConsultas = async () => {
+    baseurl.get('api/auth/ussd').then((response) => {
+      setRows(response.data);
+    });
+  };
 
-  // const TOTAL = requisicoes.length;
-  // console.log("Tamanho",TOTAL)
-
-  // useEffect(() => {
-  //   getConsultas();
-  // }, []);
+  useEffect(() => {
+    getConsultas();
+  }, []);
   return (
     <div style={{ height: 400, width: '100%' }}>
       <h3>Operações Concluídas</h3>
