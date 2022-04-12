@@ -6,6 +6,7 @@ import ReactApexChart from 'react-apexcharts';
 import { useTheme, styled } from '@mui/material/styles';
 import { Card, CardHeader } from '@mui/material';
 // utils
+import { baseurl } from '../../../lib/settings';
 import { React, useEffect, useState } from 'react';
 // import { fNumber } from '../../../utils/formatNumber';
 //
@@ -57,14 +58,14 @@ export default function AppCurrentVisits() {
         contMovitel++;
         console.log('Resultado Cont contMovitel-->', contMovitel);
       } else if (
-        requisi.phone.substring(0, 5) === '25884' ||
-        requisi.phone.substring(0, 5) === '25885'
+        requisi.phone.substring(0, 5) == '25884' ||
+        requisi.phone.substring(0, 5) == '25885'
       ) {
         contVodacom++;
         console.log('Resultado Cont contVodacom-->', contVodacom);
       } else if (
-        requisi.phone.substring(0, 5) === '25882' ||
-        requisi.phone.substring(0, 5) === '25883'
+        requisi.phone.substring(0, 5) == '25882' ||
+        requisi.phone.substring(0, 5) == '25883'
       ) {
         contTmcel++;
         console.log('Resultado Cont contTmcel-->', contTmcel);
