@@ -8,12 +8,6 @@ import { baseurl } from '../../../lib/settings';
 export default function Tabelaoperacoesnaoconcluidas() {
   const [rows, setRows] = useState([]);
   const [requisicoes, setRequisicoes] = useState([]);
-  const [selectedIds, setSelectedIds] = useState([]);
-  const [error, setError] = useState();
-  const [loading, setIsloading] = useState(true);
-  const [searchText, setSearchText] = React.useState('');
-  const [ros, setRos] = React.useState(rows.ros);
-  const [valor, setValor] = useState();
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
