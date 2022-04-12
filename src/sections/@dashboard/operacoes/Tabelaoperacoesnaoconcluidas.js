@@ -18,9 +18,36 @@ export default function Tabelaoperacoesnaoconcluidas() {
 
   const columns = [
     // { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'phone', headerName: 'Celular', width: 130 },
-    { field: 'date', headerName: 'Data', width: 140 },
-    { field: 'trasantion_type', headerName: 'Operacao', width: 370 }
+    {
+      field: 'phone',
+      headerName: 'Celular',
+      width: 130,
+      options: {
+        filter: true,
+        sort: true,
+        options: { sortDirection: 'desc' }
+      }
+    },
+    {
+      field: 'date',
+      headerName: 'Data',
+      width: 140,
+      options: {
+        filter: true,
+        sort: true,
+        options: { sortDirection: 'desc' }
+      }
+    },
+    {
+      field: 'trasantion_type',
+      headerName: 'Operacao',
+      width: 370,
+      options: {
+        filter: true,
+        sort: true,
+        options: { sortDirection: 'desc' }
+      }
+    }
   ];
 
   const getRequisicoes = async () => {

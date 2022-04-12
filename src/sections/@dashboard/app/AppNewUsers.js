@@ -44,7 +44,7 @@ export default function AppNewUsers() {
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
-    baseurl.get('api/auth/ussd/').then((response) => {
+    baseurl.get('api/auth/all_requests').then((response) => {
       setRows(response.data);
     });
   }, []);
