@@ -3,6 +3,10 @@ import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 // utils
 import PaymentsIcon from '@mui/icons-material/Payments';
+
+import { React, useEffect, useState } from 'react';
+import { baseurl } from '../../../lib/settings';
+
 // component
 import Iconify from '../../../components/Iconify';
 
@@ -36,7 +40,19 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 const TOTAL = 74;
 
-export default function TotalPagamentos() {
+export default function AppWeeklySales() {
+  const [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    baseurl.get('api/auth/payments/').then((response) => {
+      setRows(response.data);
+    });
+  }, []);
+
+  const TOTAL = rows.length;
+  // armazena o valor da variavel TOTAL
+  // localStorage.setItem('msisdn', TOTAL);
+
   return (
     <RootStyle>
       <IconWrapperStyle>

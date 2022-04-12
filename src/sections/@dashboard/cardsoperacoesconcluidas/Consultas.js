@@ -2,7 +2,11 @@
 import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 // utils
+import axios from 'axios';
 import SearchIcon from '@mui/icons-material/Search';
+import React, { useEffect, useState } from 'react';
+import apirequest, { baseurl } from '../../../lib/settings';
+
 // component
 import Iconify from '../../../components/Iconify';
 
@@ -36,7 +40,19 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 const TOTAL = 135;
 
-export default function Consultas() {
+export default function AppNewUsers() {
+  const [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    baseurl.get('api/auth/ussd/').then((response) => {
+      setRows(response.data);
+    });
+  }, []);
+
+  console.log(rows.length);
+
+  const TOTAL = rows.length;
+
   return (
     <RootStyle>
       <IconWrapperStyle>
