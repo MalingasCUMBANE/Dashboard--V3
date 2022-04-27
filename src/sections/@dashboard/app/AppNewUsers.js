@@ -8,7 +8,6 @@ import React, { useEffect, useState } from 'react';
 import apirequest, { baseurl } from '../../../lib/settings';
 
 // component
-import Iconify from '../../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -37,17 +36,14 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 }));
 
 // ----------------------------------------------------------------------
-
-const TOTAL = 135;
-
 export default function AppNewUsers() {
-  const [rows, setRows] = useState([]);
-
   useEffect(() => {
     baseurl.get('api/auth/all_requests').then((response) => {
       setRows(response.data);
     });
-  }, []);
+  });
+
+  const [rows, setRows] = useState([]);
 
   console.log(rows.length);
 
@@ -56,7 +52,6 @@ export default function AppNewUsers() {
   return (
     <RootStyle>
       <IconWrapperStyle>
-        {/* <Iconify icon="ant-design:apple-filled" width={24} height={24} /> */}
         <SearchIcon />
       </IconWrapperStyle>
       <Typography variant="h3">{TOTAL}</Typography>

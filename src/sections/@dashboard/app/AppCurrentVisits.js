@@ -36,12 +36,12 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function AppCurrentVisits() {
-  const theme = useTheme();
-  const [rows, setRows] = useState([]);
   useEffect(() => {
     getConsultas();
   }, []);
 
+  const theme = useTheme();
+  const [rows, setRows] = useState([]);
   var contMovitel = 0;
   var contVodacom = 0;
   var contTmcel = 0;

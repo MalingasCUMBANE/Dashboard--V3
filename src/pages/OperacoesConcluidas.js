@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as React from 'react';
 import { DataGrid, GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
 import { useState, useEffect } from 'react';
@@ -27,7 +28,6 @@ export default function OperacoesConcluidas() {
   const [rows, setRows] = useState([]);
 
   const columns = [
-    // { field: 'id', headerName: 'ID', width: 70 },
     { field: 'phone', headerName: 'Celular', width: 130 },
     { field: 'date', headerName: 'Data', width: 140 },
     { field: 'trasantion_type', headerName: 'Operação', width: 370 }

@@ -22,8 +22,6 @@ import Tabelaoperacoesnaoconcluidas from '../sections/@dashboard/operacoes/Tabel
 // ----------------------------------------------------------------------
 
 export default function DashboardApp() {
-  const token = localStorage.getItem('token');
-  console.log('token boy', token);
   return (
     <Page title="Dashboard | Minimal-UI">
       <Container maxWidth="xl">
