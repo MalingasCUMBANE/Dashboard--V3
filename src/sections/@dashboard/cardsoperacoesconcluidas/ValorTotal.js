@@ -6,9 +6,6 @@ import PaymentsIcon from '@mui/icons-material/Payments';
 
 import { React, useEffect, useState } from 'react';
 import { baseurl } from '../../../lib/settings';
-// import { fShortenNumber } from '../../../utils/formatNumber';
-//
-import Iconify from '../../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -47,19 +44,18 @@ export default function AppItemOrders() {
     });
   }, []);
 
-  console.log(rows.length);
+  let a = rows.length;
 
-  let VALOR_TOTAL = rows.length;
+  console.log(a);
 
-  VALOR_TOTAL *= 3;
+  a *= 3;
   // armazena o valor da variavel TOTAL
   return (
     <RootStyle>
       <IconWrapperStyle>
-        {/* <Iconify icon="ant-design:windows-filled" width={24} height={24} /> */}
         <PaymentsIcon />
       </IconWrapperStyle>
-      <Typography variant="h3">{VALOR_TOTAL} MT</Typography>
+      <Typography variant="h3">{a} MT</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         Valor Total
       </Typography>

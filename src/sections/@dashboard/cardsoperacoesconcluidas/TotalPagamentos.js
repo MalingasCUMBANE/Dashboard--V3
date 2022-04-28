@@ -38,8 +38,6 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const TOTAL = 74;
-
 export default function AppWeeklySales() {
   const [rows, setRows] = useState([]);
 
@@ -50,8 +48,6 @@ export default function AppWeeklySales() {
   }, []);
 
   const TOTAL = rows.length;
-  // armazena o valor da variavel TOTAL
-  // localStorage.setItem('msisdn', TOTAL);
 
   return (
     <RootStyle>
