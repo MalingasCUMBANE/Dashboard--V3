@@ -47,18 +47,18 @@ function Plano2022() {
         });
     };
 
-    useEffect(() => {
-        getRespostas();
-        const interval = setInterval(() => {
-            setCounter((counter) => counter + 1);
-        }, 5000);
-        return () => {
-            clearInterval(interval);
-            if (counter === 4) {
-                setCounter(0);
-            }
-        };
-    }, [counter]);
+    // useEffect(() => {
+    //     getRespostas();
+    //     const interval = setInterval(() => {
+    //         setCounter((counter) => counter + 1);
+    //     }, 5000);
+    //     return () => {
+    //         clearInterval(interval);
+    //         if (counter === 4) {
+    //             setCounter(0);
+    //         }
+    //     };
+    // }, [counter]);
 
     return (
         <>

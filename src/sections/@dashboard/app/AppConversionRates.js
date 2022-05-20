@@ -30,56 +30,44 @@ export default function AppConversionRates() {
       setRows(response.data);
     });
   };
-
   {
     rows.map((requisi, index) => {
-      console.log('Inicio');
       if (requisi.trasantion_type === 'validateNIC') {
-        console.log('TYPE----', requisi.trasantion_type)
         validateNIC += 1;
-        console.log('Cont validateNIC-->', validateNIC);
       } else if (
         requisi.trasantion_type === 'ControlNIC'
       ) {
         ControlNIC += 1;
-        console.log('Cont ControlNIC-->', ControlNIC);
       } else if (
         requisi.validateNIC === 'ControlInfoUteis'
       ) {
         ControlInfoUteis += 1;
-        console.log('Cont ControlInfoUteis-->', ControlInfoUteis);
       } else if (
         requisi.validateNIC === 'ControlDenuncias'
       ) {
         ControlDenuncias += 1;
-        console.log('Cont ControlDenuncias-->', ControlDenuncias);
       } else if (
         requisi.trasantion_type === 'ControlFiscalizacao'
       ) {
         ControlFiscalizacao += 1;
-        console.log('Cont ControlFiscalizacao-->', ControlFiscalizacao);
       } else if (
         requisi.trasantion_type === 'ControlDadosEstatisticos'
       ) {
         ControlDadosEstatisticos += 1;
-        console.log('Cont ControlDadosEstatisticos-->', ControlDadosEstatisticos);
       }
       else if (
         requisi.trasantion_type === 'ControlPagamentosDiarios'
       ) {
         ControlPagamentosDiarios += 1;
-        console.log('Cont ControlPagamentosDiarios-->', ControlPagamentosDiarios);
       } else if (
         requisi.trasantion_type === 'ControlNotarios'
       ) {
         ControlNotarios += 1;
-        console.log('Cont ControlNotarios-->', ControlNotarios);
       }
       else if (
         requisi.trasantion_type === 'validateNIC'
       ) {
         validateNIC += 1;
-        console.log('Cont validateNIC-->', validateNIC);
       }
     });
   }

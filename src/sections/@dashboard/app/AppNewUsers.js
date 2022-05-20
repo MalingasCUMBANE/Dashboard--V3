@@ -2,14 +2,9 @@
 import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 // utils
-import axios from 'axios';
 import SearchIcon from '@mui/icons-material/Search';
 import React, { useEffect, useState } from 'react';
-import apirequest, { baseurl } from '../../../lib/settings';
-
-// component
-
-// ----------------------------------------------------------------------
+import { baseurl } from '../../../lib/settings';
 
 const RootStyle = styled(Card)(({ theme }) => ({
   boxShadow: 'none',
@@ -37,24 +32,24 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 export default function AppNewUsers() {
-  // useEffect(() => {
-  //   baseurl.get('api/auth/all_requests').then((response) => {
-  //     setRows(response.data);
-  //   });
-  // });
+  useEffect(() => {
+    baseurl.get('api/auth/all_requests').then((response) => {
+      setRows(response.data);
+    });
+  });
 
-  // const [rows, setRows] = useState([]);
+  const [rows, setRows] = useState([]);
 
-  // console.log(rows.length);
+  console.log(rows.length);
 
-  // const TOTAL = rows.length;
+  const TOTAL = rows.length;
 
   return (
     <RootStyle>
       <IconWrapperStyle>
         <SearchIcon />
       </IconWrapperStyle>
-      {/* <Typography variant="h3">{TOTAL}</Typography> */}
+      <Typography variant="h3">{TOTAL}</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         Acessos ao 744
       </Typography>

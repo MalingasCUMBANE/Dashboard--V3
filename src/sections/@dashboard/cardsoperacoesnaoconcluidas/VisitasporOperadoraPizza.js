@@ -53,22 +53,16 @@ export default function VisitasporOperadoraPizza() {
 
   {
     rows.map((requisi, index) => {
-      console.log('Inicio');
       if (requisi.phone.substring(0, 5) == '25887' || requisi.phone.substring(0, 5) == '25886') {
         contMovitel++;
-        console.log('Resultado Cont contMovitel-->', contMovitel);
       } else if (
-        requisi.phone.substring(0, 5) == '25884' ||
-        requisi.phone.substring(0, 5) == '25885'
+        requisi.phone.substring(0, 5) == '25884' || requisi.phone.substring(0, 5) == '25885'
       ) {
         contVodacom++;
-        console.log('Resultado Cont contVodacom-->', contVodacom);
       } else if (
-        requisi.phone.substring(0, 5) == '25882' ||
-        requisi.phone.substring(0, 5) == '25883'
+        requisi.phone.substring(0, 5) == '25882' || requisi.phone.substring(0, 5) == '25883'
       ) {
         contTmcel++;
-        console.log('Resultado Cont contTmcel-->', contTmcel);
       }
     });
   }
