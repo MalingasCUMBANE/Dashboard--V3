@@ -1,5 +1,7 @@
+import { React, useEffect, useState } from 'react';
 import { faker } from '@faker-js/faker';
 import PropTypes from 'prop-types';
+import { baseurl } from '../../../lib/settings';
 // material
 import { Card, Typography, CardHeader, CardContent } from '@mui/material';
 import {
@@ -12,38 +14,6 @@ import {
 } from '@mui/lab';
 // utils
 import { fDateTime } from '../../../utils/formatTime';
-
-// ----------------------------------------------------------------------
-
-const TIMELINES = [
-  {
-    title: '876795003',
-    time: faker.date.past(),
-    type: '08/04/2022'
-  },
-  {
-    title: '843795003',
-    time: faker.date.past(),
-    type: '08/04/2022'
-  },
-  {
-    title: '866795003',
-    time: faker.date.past(),
-    type: '08/04/2022'
-  },
-  {
-    title: '846795003',
-    time: faker.date.past(),
-    type: '08/04/2022'
-  },
-  {
-    title: '846795003',
-    time: faker.date.past(),
-    type: '08/04/2022'
-  }
-];
-
-// ----------------------------------------------------------------------
 
 OrderItem.propTypes = {
   item: PropTypes.object,
@@ -78,6 +48,17 @@ function OrderItem({ item, isLast }) {
 }
 
 export default function AppOrderTimeline() {
+  const [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    getConsultas();
+  }, []);
+
+  const getConsultas = async () => {
+    baseurl.get('api/auth/all_requests').then((response) => {
+      setRows(response.data);
+    });
+  };
   return (
     <Card
       sx={{
@@ -89,9 +70,8 @@ export default function AppOrderTimeline() {
       <CardHeader title="Top 5 Consultas" />
       <CardContent>
         <Timeline>
-          {TIMELINES.map((item, index) => (
-            <OrderItem key={item.title} item={item} isLast={index === TIMELINES.length - 1} />
-          ))}
+          
+
         </Timeline>
       </CardContent>
     </Card>
