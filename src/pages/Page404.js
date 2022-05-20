@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 // material
@@ -22,30 +21,29 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 export default function Page404() {
   return (
-    <RootStyle title="404 Page Not Found | Minimal-UI">
+    <RootStyle title="404 Page Not Found">
       <Container>
         <MotionContainer initial="initial" open>
-          <Box sx={{ maxWidth: 480, margin: 'auto', textAlign: 'center' }}>
+          <Box sx={{ maxWidth: 380, margin: 'auto', textAlign: 'center' }}>
             <motion.div variants={varBounceIn}>
               <Typography variant="h3" paragraph>
-                Sorry, page not found!
+                Página não encontrada!
               </Typography>
             </motion.div>
             <Typography sx={{ color: 'text.secondary' }}>
-              Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve mistyped the URL?
-              Be sure to check your spelling.
+              Não foi possível encontrar a página solicitada, digite um domínio ou URL valido
             </Typography>
 
             <motion.div variants={varBounceIn}>
               <Box
                 component="img"
                 src="/static/illustrations/illustration_404.svg"
-                sx={{ height: 260, mx: 'auto', my: { xs: 5, sm: 10 } }}
+                sx={{ height: 160, mx: 'auto', my: { xs: 5, sm: 10 } }}
               />
             </motion.div>
 
             <Button to="/" size="large" variant="contained" component={RouterLink}>
-              Go to Home
+              Voltar
             </Button>
           </Box>
         </MotionContainer>
