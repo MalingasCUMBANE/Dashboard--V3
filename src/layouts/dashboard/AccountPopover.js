@@ -18,11 +18,6 @@ const MENU_OPTIONS = [
     icon: 'eva:home-fill',
     linkTo: '/dashboard/app'
   }
-  // {
-  //   label: 'Settings',
-  //   icon: 'eva:settings-2-fill',
-  //   linkTo: '/dashboard'
-  // }
 ];
 
 // ----------------------------------------------------------------------
@@ -104,7 +99,7 @@ export default function AccountPopover() {
         <Box sx={{ p: 2, pt: 1.5 }}>
           <Link href="http://localhost:3000/">
             <Button fullWidth color="inherit" variant="outlined">
-              Logout
+              Sair
             </Button>
           </Link>
         </Box>
