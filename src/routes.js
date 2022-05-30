@@ -1,17 +1,12 @@
 import { Navigate, useRoutes, Route } from 'react-router-dom';
-// import { BrowserRouter, , Switch,  } from "react-router-dom";
 // layouts
 import DashboardLayout from './layouts/dashboard';
 import LogoOnlyLayout from './layouts/LogoOnlyLayout';
 //
 import Login from './pages/Login';
-import { isAuthenticated } from './lib/api';
-import Register from './pages/Register';
 import DashboardApp from './pages/DashboardApp';
-// import OperacoesNaoConcluidas from './pages/OperacoesNaoConcluidas';
 import OperacoesNaoConcluidas from './pages/OperacoesNaoConcluidas';
 import Relatorios from './pages/Relatorios';
-// import OperacoesConcluidas from './pages/OperacoesConcluidas';
 import OperacoesConcluidas from './pages/OperacoesConcluidas';
 
 import NotFound from './pages/Page404';
