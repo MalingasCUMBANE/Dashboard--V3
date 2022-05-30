@@ -1,19 +1,19 @@
-import axios from 'axios';
-import * as env from './env';
+import axios from "axios";
+import * as env from "./env";
 
 // Url to our api
 export const baseurl = axios.create({
-  baseURL: 'https://silicaapi.atendimento.co.mz/'
-  // baseURL: 'http://127.0.0.1:9000/'
+  // baseURL: 'https://silicaapi.atendimento.co.mz/'
+  baseURL: "http://127.0.0.1:8000/",
 });
 
 const apirequest = axios.create({
-  baseURL: 'https://silicaapi.atendimento.co.mz/'
-  // baseURL: 'http://127.0.0.1:9000/'
+  // baseURL: 'https://silicaapi.atendimento.co.mz/'
+  baseURL: "http://127.0.0.1:8000/",
 });
 
 baseurl.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem("token");
   // config.headers.Authorization =  `Token 3668a2bc1b9b577806f401567d4370fe347d55944042f2db85c7d4ebfd8a7665`;
   if (token != null) {
     config.headers.Authorization = `Token ${token}`;
@@ -23,8 +23,8 @@ baseurl.interceptors.request.use((config) => {
 });
 
 apirequest.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
-  console.log('Here my token', JSON.parse(token));
+  const token = localStorage.getItem("token");
+  console.log("Here my token", JSON.parse(token));
   // config.headers.Authorization =  `Token 3668a2bc1b9b577806f401567d4370fe347d55944042f2db85c7d4ebfd8a7665`;
   if (token != null) {
     config.headers.Authorization = `Token ${JSON.parse(token)}`;

@@ -23,11 +23,11 @@ const sidebarConfig = [
     icon: getIcon('eva:file-text-fill')
     // icon: getIcon('eva:shopping-bag-fill')
   },
-  {
-    title: 'Relatórios',
-    path: '/dashboard/relatorios',
-    icon: getIcon('eva:file-text-fill')
-  }
+  // {
+  //   title: 'Relatórios',
+  //   path: '/dashboard/relatorios',
+  //   icon: getIcon('eva:file-text-fill')
+  // }
   // {
   //   title: 'login',
   //   path: '/login',
