@@ -1,34 +1,24 @@
 // material
 import { Box, Grid, Container, Typography } from '@mui/material';
-import VisitasporOperadoraPizza from '../sections/@dashboard/cardsoperacoesnaoconcluidas/VisitasporOperadoraPizza';
-import * as echarts from 'echarts';
-
 // components
 import Page from '../components/Page';
 import {
     AppNewUsers,
 
 } from '../sections/@dashboard/app';
-import Tabelaoperacoesconcluidas from '../sections/@dashboard/operacoes/Tabelaoperacoesconcluidas';
+import TabelaInfo from '../sections/@dashboard/mercados/tabelaoperacoes';
 
 // ----------------------------------------------------------------------
-
-
 export default function Mercados() {
     return (
         <Page title="Dashboard | Mercados">
-            <Container maxWidth="xl">
-                <Box sx={{ pb: 5 }}>
+            <Container >
+                <Box sx={{ pb: 10 }}>
                     <Typography variant="h4">Mercados</Typography>
                 </Box>
-                <Grid container spacing={3}>
-
-                    <Grid item xs={12} sm={6} md={3}>
-                        <AppNewUsers />
-                    </Grid>
-                    <br />
-                    <Grid item xs={12} sm={6} md={3}>
-                        <AppNewUsers />
+                <Grid container spacing={2}>
+                    <Grid item xs={2} sm={8} md={16}>
+                        <TabelaInfo />
                     </Grid>
                     <br />
                 </Grid>
