@@ -19,8 +19,8 @@ export default function Tabelaoperacoesmercados() {
 
     const columns = [
         { field: 'phone', headerName: 'Celular', width: 130 },
-        { field: 'date', headerName: 'Data', width: 100 },
-        { field: 'amout', headerName: 'Valor (MT)', width: 90 },
+        { field: 'date', headerName: 'Data', width: 120 },
+        { field: 'amout', headerName: 'Valor (MT)', width: 100 },
         { field: 'trasantion_type', headerName: 'Operação', width: 270 },
         { field: 'codmercado', headerName: 'Cod. Mercado', width: 150 },
     ];
