@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import DashboardApp from './pages/DashboardApp';
 import OperacoesNaoConcluidas from './pages/OperacoesNaoConcluidas';
 import Relatorios from './pages/Relatorios';
+import Mercados from './pages/Mercados';
 import OperacoesConcluidas from './pages/OperacoesConcluidas';
 
 import NotFound from './pages/Page404';
@@ -22,7 +23,8 @@ export default function Router() {
         { path: 'app', element: <DashboardApp /> },
         { path: 'operacoesconcluidas', element: <OperacoesConcluidas /> },
         { path: 'operacoesnaoconcluidas', element: <OperacoesNaoConcluidas /> },
-        { path: 'relatorios', element: <Relatorios /> }
+        { path: 'mercados', element: <Mercados /> },
+        // { path: 'relatorios', element: <Relatorios /> }
       ]
     },
     {

@@ -14,18 +14,16 @@ import {
     Bar,
 } from "recharts";
 
-
 function Plano2022() {
     const [title, setRespostas] = useState([]);
     const [dados, setDados] = useState([{}]);
-    const [counter, setCounter] = useState(0);
+    // const [counter, setCounter] = useState(0);
 
     const { id } = 1
 
     const getRespostas = async () => {
         baseurl.get('api/auth/plano/').then((resp) => {
             resp.data.map((resp) => {
-                console.log(resp.data);
                 var data = [
                     {
                         titulo: resp.title,
@@ -43,21 +41,23 @@ function Plano2022() {
                 setDados(data);
             });
             setRespostas(resp.data);
-            console.log(resp.data);
         });
     };
 
-    // useEffect(() => {
-    //     getRespostas();
-    //     const interval = setInterval(() => {
-    //         setCounter((counter) => counter + 1);
-    //     }, 5000);
-    //     return () => {
-    //         clearInterval(interval);
-    //         if (counter === 4) {
-    //             setCounter(0);
-    //         }
-    //     };
+    useEffect(() => {
+        getRespostas();
+        // const interval = setInterval(() => {
+        //     // setCounter((counter) => counter + 1);
+        //     console.log("---Contador---")
+        // }, 9000);
+        // return () => {
+        //     clearInterval(interval);
+        //     if (counter === 4) {
+        //         setCounter(0);
+        //         console.log("---Contador---")
+        //     }
+        // };
+    });
     // }, [counter]);
 
     return (
