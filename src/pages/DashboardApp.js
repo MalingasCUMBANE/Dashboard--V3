@@ -69,18 +69,10 @@ export default function DashboardApp() {
       </Container>
 
       <Container maxWidth="xl">
-        <Box sx={{ pb: 5, pt: 10 }}>
-          <Typography variant="h4">Graficos abaixo em desenvolvimento</Typography>
-        </Box>
+      <br />
+      <br />
+      <br />
         <Grid container spacing={3}>
-          {/* <Grid item xs={12} md={6} lg={8}>
-            <AppWebsiteVisits />
-          </Grid> */}
-
-          <Grid item xs={12} md={6} lg={4}>
-            <AppOrderTimeline />
-          </Grid>
-
           <Grid item xs={12} md={6} lg={8}>
             <AppConversionRates />
           </Grid>
@@ -88,6 +80,17 @@ export default function DashboardApp() {
             <Plano2022 />
           </Grid>
           <br />
+        </Grid>
+      </Container>
+      <Container maxWidth="xl">
+        <Box sx={{ pb: 5, pt: 10 }}>
+          <Typography variant="h4">Graficos abaixo em desenvolvimento</Typography>
+        </Box>
+        <Grid container spacing={3}>
+
+          <Grid item xs={12} md={6} lg={4}>
+            <AppOrderTimeline />
+          </Grid>
         </Grid>
       </Container>
     </Page>
