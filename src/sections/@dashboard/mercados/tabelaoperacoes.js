@@ -20,13 +20,12 @@ export default function Tabelaoperacoesmercados() {
     const columns = [
         { field: 'phone', headerName: 'Celular', width: 130 },
         { field: 'date', headerName: 'Data', width: 120 },
-        { field: 'amout', headerName: 'Valor (MT)', width: 100 },
-        { field: 'trasantion_type', headerName: 'Operação', width: 270 },
-        { field: 'codmercado', headerName: 'Cod. Mercado', width: 150 },
+        // { field: 'amout', headerName: 'Valor (MT)', width: 100 },
+        { field: 'trasantion_type', headerName: 'Operação', width: 270 }
     ];
 
     const getConsultas = async () => {
-        baseurl.get('api/auth/payments/mercados/all').then((response) => {
+        baseurl.get('api/auth/endpointmercados').then((response) => {
             setRows(response.data);
         });
     };

@@ -99,7 +99,7 @@ export default function VisitasporOperadoraPizza() {
 
   return (
     <Card>
-      <CardHeader title="Operações por Operadora - sem concluir" />
+      <CardHeader title="Operações nao concluidas" />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="pie" series={CHART_DATA} options={chartOptions} height={280} />
       </ChartWrapperStyle>
