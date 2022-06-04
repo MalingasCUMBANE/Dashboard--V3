@@ -3,13 +3,13 @@ import * as env from "./env";
 
 // Url to our api
 export const baseurl = axios.create({
-  // baseURL: 'https://silicaapi.atendimento.co.mz/'
-  baseURL: "http://127.0.0.1:8000/",
+  baseURL: 'https://silicaapi.atendimento.co.mz/'
+  // baseURL: "http://127.0.0.1:8000/",
 });
 
 const apirequest = axios.create({
-  // baseURL: 'https://silicaapi.atendimento.co.mz/'
-  baseURL: "http://127.0.0.1:8000/",
+  baseURL: 'https://silicaapi.atendimento.co.mz/'
+  // baseURL: "http://127.0.0.1:8000/",
 });
 
 baseurl.interceptors.request.use((config) => {
