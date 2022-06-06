@@ -76,9 +76,9 @@ export default function DashboardApp() {
           <Grid item xs={12} md={6} lg={8}>
             <AppConversionRates />
           </Grid>
-          <Grid item xs={12} sm={6} md={12}>
+          {/* <Grid item xs={12} sm={6} md={12}>
             <Plano2022 />
-          </Grid>
+          </Grid> */}
           <br />
         </Grid>
       </Container>
