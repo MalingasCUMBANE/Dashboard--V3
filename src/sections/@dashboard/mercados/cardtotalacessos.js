@@ -5,7 +5,7 @@ import { Card, Typography } from '@mui/material';
 import axios from 'axios';
 import SearchIcon from '@mui/icons-material/Search';
 import React, { useEffect, useState } from 'react';
-import  { baseurl } from '../../../lib/settings';
+import { baseurl } from '../../../lib/settings';
 
 // component
 import Iconify from '../../../components/Iconify';
@@ -49,7 +49,7 @@ export default function CardAcessosMercados() {
     });
   }, []);
 
-  console.log(rows.length);
+  console.log("Total Acessos Mercados", rows.length);
 
   const TOTAL = rows.length;
 
