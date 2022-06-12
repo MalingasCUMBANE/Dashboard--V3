@@ -14,6 +14,7 @@ let MF = 0;
 let FM = 0;
 let JM = 0;
 let SETETABRIL = 0;
+let MZ = 0;
 var amout = 0;
 
 export default function AppConversionRates() {
@@ -38,9 +39,11 @@ export default function AppConversionRates() {
                 FM += 1;
             } else if (requisi.codmercado === 'JM') {
                 JM += 1;
-            } else if (requisi.codmercado === 'SETETABRIL') {
+            } else if (requisi.codmercado === '7A') {
                 SETETABRIL += 1;
-            }
+            } else if (requisi.codmercado === 'MZ') {
+                MZ += 1;
+            } 
         });
     }
 
@@ -55,6 +58,7 @@ export default function AppConversionRates() {
                 'Francisco Manyamga (FM)',
                 'Josina Machel (JM)',
                 '7 de Abril (7A)',
+                'Mercado (MZ)',
             ]
         }
     });
