@@ -29,9 +29,9 @@ export default function Mercados() {
                     <Grid item xs={2} sm={8} md={3}>
                         {/* <CardAcessosMercados /> */}
                     </Grid>
-                    {/* <Grid item xs={2} sm={8} md={5}>
+                    <Grid item xs={2} sm={8} md={5}>
                         <CardValorTotalMercados />
-                    </Grid> */}
+                    </Grid>
                     <Grid item xs={2} sm={8} md={16}>
                         <TabelaInfo />
                     </Grid>

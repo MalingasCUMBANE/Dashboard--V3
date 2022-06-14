@@ -39,23 +39,21 @@ export default function CardValorTotalMercados() {
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
-    baseurl.get('api/auth/payments/mercados/all').then((response) => {
+    baseurl.get('api/auth/contvalor/mercados').then((response) => {
       setRows(response.data);
     });
   }, []);
 
-  let a = rows.length;
+  let a = rows
 
-  console.log(a);
-
-  a *= 3;
+  console.log("Valor"+a);
   // armazena o valor da variavel TOTAL
   return (
     <RootStyle>
       <IconWrapperStyle>
         <PaymentsIcon />
       </IconWrapperStyle>
-      <Typography variant="h3"> 0 MT</Typography>
+      <Typography variant="h3"> {a} MT</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         Valor Total
       </Typography>
