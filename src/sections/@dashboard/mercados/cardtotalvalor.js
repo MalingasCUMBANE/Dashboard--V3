@@ -44,9 +44,9 @@ export default function CardValorTotalMercados() {
     });
   }, []);
 
-  let a = rows
+  let a = rows.map((item) => item.totalamout).toString()
 
-  console.log("Valor"+a);
+  console.log("Valor" + a);
   // armazena o valor da variavel TOTAL
   return (
     <RootStyle>

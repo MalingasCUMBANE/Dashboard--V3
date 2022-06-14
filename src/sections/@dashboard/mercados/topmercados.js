@@ -15,6 +15,7 @@ let FM = 0;
 let JM = 0;
 let SETETABRIL = 0;
 let MZ = 0;
+let VINTECINCOJUNHO = 0;
 var amout = 0;
 
 export default function AppConversionRates() {
@@ -43,11 +44,13 @@ export default function AppConversionRates() {
                 SETETABRIL += 1;
             } else if (requisi.codmercado === 'MZ') {
                 MZ += 1;
+            } else if (requisi.codmercado === '25J') {
+                VINTECINCOJUNHO += 1;
             } 
         });
     }
 
-    const grafico = [{ data: [MC, MF, FM, JM, SETETABRIL,MZ] }];
+    const grafico = [{ data: [MC, MF,VINTECINCOJUNHO, FM, JM, SETETABRIL,MZ] }];
 
     const chartOptions = merge(BaseOptionChart(), {
 
@@ -55,6 +58,7 @@ export default function AppConversionRates() {
             categories: [
                 'Mercado Central (MC)',
                 'Mercado Feira (MF)',
+                '25 de Junho (25J)',
                 'Francisco Manyamga (FM)',
                 'Josina Machel (JM)',
                 '7 de Abril (7A)',

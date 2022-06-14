@@ -10,6 +10,7 @@ import TabelaInfo from '../sections/@dashboard/mercados/tabelaoperacoes';
 import CardAcessosMercados from 'src/sections/@dashboard/mercados/cardtotalacessos';
 import CardValorTotalMercados from 'src/sections/@dashboard/mercados/cardtotalvalor';
 import Tabelaoperacoesmercados from '../sections/@dashboard/mercados/topmercados';
+import Totalvendedores from '../sections/@dashboard/mercados/total_vendedores';
 
 // ----------------------------------------------------------------------
 export default function Mercados() {
@@ -20,16 +21,13 @@ export default function Mercados() {
                     <Typography variant="h4">Mercados</Typography>
                 </Box>
                 <Grid container spacing={2}>
-                    <Grid item xs={2} sm={8} md={3}>
-                        {/* <CardAcessosMercados /> */}
-                    </Grid>
-                    <Grid item xs={2} sm={8} md={5}>
+                    <Grid item xs={2} sm={8} md={4}>
                         <CardAcessosMercados />
                     </Grid>
-                    <Grid item xs={2} sm={8} md={3}>
-                        {/* <CardAcessosMercados /> */}
+                    <Grid item xs={2} sm={8} md={4}>
+                        <CardValorTotalMercados />
                     </Grid>
-                    <Grid item xs={2} sm={8} md={5}>
+                    <Grid item xs={2} sm={8} md={4}>
                         <CardValorTotalMercados />
                     </Grid>
                     <Grid item xs={2} sm={8} md={16}>
@@ -37,6 +35,9 @@ export default function Mercados() {
                     </Grid>
                     <Grid item xs={2} sm={8} md={16}>
                         <Tabelaoperacoesmercados />
+                    </Grid>
+                    <Grid item xs={2} sm={8} md={16}>
+                        <Totalvendedores />
                     </Grid>
                     <br />
                 </Grid>
