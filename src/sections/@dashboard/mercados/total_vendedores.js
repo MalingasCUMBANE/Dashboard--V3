@@ -70,7 +70,7 @@ export default function Totalvendedores() {
             <br />
             <br />
             <Card>
-                <CardHeader title="Mercados " subheader="Total de vendedores por mercado (Aguardadndo Query)" />
+                <CardHeader title="Mercados " subheader="Total de vendedores por mercado" />
                 <Box sx={{ mx: 3 }} dir="ltr">
                     <ReactApexChart type="bar" series={grafico} options={chartOptions} height={364} />
                 </Box>
