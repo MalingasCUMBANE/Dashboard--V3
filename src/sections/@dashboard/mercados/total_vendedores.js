@@ -20,11 +20,11 @@ let MZ = 201;
 export default function Totalvendedores() {
     const [rows, setRows] = useState([]);
 
-    useEffect(() => {
-        getConsultas();
-    }, []);
+    // useEffect(() => {
+    //     getConsultas();
+    // }, []);
 
-    // const getConsultas = async () => {
+    // // const getConsultas = async () => {
     //     baseurl.get('api/auth/endpointmercados').then((response) => {
     //         setRows(response.data);
     //     });
