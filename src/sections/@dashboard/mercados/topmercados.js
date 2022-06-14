@@ -47,7 +47,7 @@ export default function AppConversionRates() {
         });
     }
 
-    const grafico = [{ data: [MC, MF, FM, JM, SETETABRIL] }];
+    const grafico = [{ data: [MC, MF, FM, JM, SETETABRIL,MZ] }];
 
     const chartOptions = merge(BaseOptionChart(), {
 
