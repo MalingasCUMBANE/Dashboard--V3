@@ -24,7 +24,7 @@ const sidebarConfig = [
     // icon: getIcon('eva:shopping-bag-fill')
   },
   {
-    title: 'Mercados',
+    title: 'Pagamentos Diarios',
     path: '/dashboard/mercados',
     icon: getIcon('eva:file-text-fill')
     // icon: getIcon('eva:shopping-bag-fill')
