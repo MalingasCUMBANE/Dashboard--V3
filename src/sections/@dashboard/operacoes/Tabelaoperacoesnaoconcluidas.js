@@ -57,7 +57,9 @@ export default function Tabelaoperacoesnaoconcluidas() {
   };
 
   useEffect(() => {
-    getRequisicoes();
+    baseurl.get('api/auth/all_requests').then((response) => {
+      setRequisicoes(response.data);
+    });
   }, []);
 
   return (

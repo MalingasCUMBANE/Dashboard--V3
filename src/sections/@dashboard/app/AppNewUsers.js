@@ -32,24 +32,19 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 export default function AppNewUsers() {
+  const [acessos, setAcessos] = useState([]);
   useEffect(() => {
-    baseurl.get('api/auth/all_requests').then((response) => {
-      setRows(response.data);
+    baseurl.get('api/auth/contallrequests/ussd').then((response) => {
+      setAcessos(response.data);
     });
   });
-
-  const [rows, setRows] = useState([]);
-
-  console.log(rows.length);
-
-  const TOTAL = rows.length;
-
+  
   return (
     <RootStyle>
       <IconWrapperStyle>
         <SearchIcon />
       </IconWrapperStyle>
-      <Typography variant="h3">{TOTAL}</Typography>
+      <Typography variant="h3">{acessos.totalrequests}</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         Acessos ao 744
       </Typography>

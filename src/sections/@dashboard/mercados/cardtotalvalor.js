@@ -36,24 +36,23 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function CardValorTotalMercados() {
-  const [rows, setRows] = useState([]);
+  const [valor, setValor] = useState([]);
 
   useEffect(() => {
     baseurl.get('api/auth/contvalor/mercados').then((response) => {
-      setRows(response.data);
+      console.log(response.data);
+      setValor(response.data);
     });
   }, []);
 
-  let a = rows.map((item) => item.totalamout).toString()
+  console.log("Valor-->", valor.totalamout)
 
-  console.log("Valor" + a);
-  // armazena o valor da variavel TOTAL
   return (
     <RootStyle>
       <IconWrapperStyle>
         <PaymentsIcon />
       </IconWrapperStyle>
-      <Typography variant="h3"> {a} MT</Typography>
+      <Typography variant="h3">{valor.totalamout} MT</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         Valor Total
       </Typography>

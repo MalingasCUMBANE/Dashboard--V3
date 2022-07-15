@@ -3,12 +3,8 @@ import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 // utils
 import PaymentsIcon from '@mui/icons-material/Payments';
-
 import { React, useEffect, useState } from 'react';
 import { baseurl } from '../../../lib/settings';
-
-// component
-import Iconify from '../../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
