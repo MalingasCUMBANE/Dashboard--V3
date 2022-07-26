@@ -6,6 +6,7 @@ import PaymentsIcon from '@mui/icons-material/Payments';
 
 import { React, useEffect, useState } from 'react';
 import { baseurl } from '../../../lib/settings';
+import { CircularProgress } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
@@ -37,19 +38,23 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 const TOTAL = 74;
 
-export default function AppWeeklySales() {
+export default function AppWeeklySales(props) {
   const [rows, setRows] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    baseurl.get('api/auth/payments/').then((response) => {
-      setRows(response.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true)
+  //   baseurl.get('api/auth/payments/').then((response) => {
+  //     setRows(response.data);
+  //     setLoading(false)
+
+  //   });
+  // }, []);
 
   const TOTAL = rows.length;
   // armazena o valor da variavel TOTAL
   // localStorage.setItem('msisdn', TOTAL);
-
+  console.log("Props: ", props)
   return (
     <RootStyle>
       <IconWrapperStyle>
@@ -57,7 +62,7 @@ export default function AppWeeklySales() {
         <PaymentsIcon />
       </IconWrapperStyle>
       {/* <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography> */}
-      <Typography variant="h3">{TOTAL}</Typography>
+      <Typography variant="h3">{props.total}</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         Total pagamentos <br />
         (Para o Municipio)

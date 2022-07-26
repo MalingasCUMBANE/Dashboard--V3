@@ -57,7 +57,7 @@ export default function AppItemOrders() {
       </IconWrapperStyle>
       <Typography variant="h3">{VALOR_TOTAL} MT</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-        Valor Total
+        Valor Totall
       </Typography>
     </RootStyle>
   );
